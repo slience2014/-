@@ -1,0 +1,27 @@
+
+/********************************** 首页 幻灯片 ***********************************/
+#indexad{z-index:2;max-width:1600px;min-width:1000px;overflow: hidden;margin:auto;text-align:center;padding-bottom:20px;}
+
+#indexad .flex-direction-nav li{list-style:none;}
+#indexad .flex-direction-nav a {width:40px; height:90px; margin-top:-22px; display:block; position:absolute; top:50%;text-indent:-9000px;filter:alpha(Opacity=70);-moz-opacity:0.7;opacity: 0.7;}
+#indexad .flex-direction-nav a.flex-prev {left:0%;background:url(../../assets/img/ico_left.jpg) no-repeat;margin-left: 0px;}
+#indexad .flex-direction-nav a.flex-prev:hover {background-position:left bottom;}
+#indexad .flex-direction-nav a.flex-next {right:0%; background:url(../../assets/img/ico_right.jpg) no-repeat;margin-right: -1px;}
+#indexad .flex-direction-nav a.flex-next:hover {background-position:right bottom;}
+#indexad .flex-control-paging {display:none;}
+#indexad .slides{height:580px;}
+
+#indexad .flexslider {margin: 0; padding: 0;position: relative;}
+#indexad .flexslider .slides > li {
+  display: none;height:580px;
+  -webkit-backface-visibility: hidden;
+  list-style-type: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+#indexad .flexslider .slides img {width: 100%; display: block;}
+#indexad .flex-pauseplay span {text-transform: capitalize;}
+
+#indexad div ul.slides li div{height:40px;line-height:40px;background:#333;filter:alpha(Opacity=70);-moz-opacity:0.7;opacity: 0.7;color:#fff;text-align:center;font-size:14px;position: absolute;bottom: 0;left: 0;width:100%;}
+#indexad div ul.slides li div table{margin:auto;}
+#indexad div ul.slides li div img{padding-top:2px;margin-left:20px;}
+
+
