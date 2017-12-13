@@ -85,3 +85,29 @@ a:link,a:visited,a:active,a:hover{text-decoration:none;color:#585858;}
 #indexad div ul.slides li div table{margin:auto;}
 #indexad div ul.slides li div img{padding-top:2px;margin-left:20px;}
 
+/********************************** 内页 幻灯片 ***********************************/
+
+#contentad{z-index:2;width:900px;margin:auto;text-align:center;padding-top:25px;padding-bottom:20px;}
+
+#contentad .flex-direction-nav li{list-style:none;}
+#contentad .flex-direction-nav a {width:40px; height:90px; margin-top:-22px; display:block; position:absolute; top:50%;text-indent:-9000px;filter:alpha(Opacity=90);-moz-opacity:0.9;opacity: 0.9;}
+#contentad .flex-direction-nav a.flex-prev {left:-6%; background:url(./assets/img/ico_left.jpg) no-repeat;margin-left: 0px;}
+#contentad .flex-direction-nav a.flex-prev:hover {background-position:left bottom;}
+#contentad .flex-direction-nav a.flex-next {right:-6%; background:url(./assets/img/ico_right.jpg) no-repeat;margin-right: -1px;}
+#contentad .flex-direction-nav a.flex-next:hover {background-position:right bottom;}
+#contentad .flex-control-paging {display:none;}
+#contentad .slides{height:500px;}
+
+#contentad .flexslider {margin: 0; padding: 0;position: relative;}
+#contentad .flexslider .slides > li {
+  display: block;height:500px;
+  -webkit-backface-visibility: hidden;
+  list-style-type: none;
+} /* Hide the slides before the JS is loaded. Avoids image jumping */
+#contentad .flexslider .slides img {width: 100%; display: block;}
+#contentad .flex-pauseplay span {text-transform: capitalize;}
+
+#imgcap{background:#837256;color:#fff;height:50px;}
+#imgcap div.c1{width:819px;height:50px;float:left;text-indent:50px;line-height:50px;font-size:14px;}
+#imgcap div.c2{width:110px;height:50px;float:right;margin-right:60px;text-align:center;}
+#imgcap div.c2 img{margin-top:8px;}

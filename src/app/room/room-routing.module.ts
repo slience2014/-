@@ -12,6 +12,10 @@ const routes: Routes = [
     component: RoomComponent,
     children: [
       {
+        path:'',
+        component: StandardComponent
+      },
+      {
         path:'standard',
         component: StandardComponent
       },

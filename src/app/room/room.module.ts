@@ -7,6 +7,7 @@ import { StandardComponent } from './standard/standard.component';
 import { SuperiorComponent } from './superior/superior.component';
 import { RoomRoutingModule }  from './room-routing.module';
 import { RoomComponent } from './room.component';
+
 @NgModule({
   imports: [
     CommonModule,

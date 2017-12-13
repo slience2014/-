@@ -10,7 +10,9 @@ import { RoomModule } from './room/room.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
-import { SlideImgComponent } from './slide-img/slide-img.component';
+import { FootComponent } from './foot/foot.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { SlideImgComponent } from './slide-img/slide-img.component';
 
     HomeComponent,
 
-    SlideImgComponent
+    FootComponent
   ],
   imports: [
     RoomModule,

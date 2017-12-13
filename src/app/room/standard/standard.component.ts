@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
+
 @Component({
   selector: 'app-standard',
   templateUrl: './standard.component.html',
