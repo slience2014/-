@@ -8,6 +8,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { RoomModule } from './room/room.module';
 import { HomeComponent } from './home/home.component';
+import { MessageComponent } from './message/message.component';
 const routes: Routes = [
   {
     path: '',
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'aboutus',
     component: AboutusComponent
+  },
+  {
+    path: 'message',
+    component: MessageComponent
   }
 
 ];

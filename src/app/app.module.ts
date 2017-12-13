@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FootComponent } from './foot/foot.component';
+import { MessageComponent } from './message/message.component';
 
 
 
@@ -25,7 +26,9 @@ import { FootComponent } from './foot/foot.component';
 
     HomeComponent,
 
-    FootComponent
+    FootComponent,
+
+    MessageComponent
   ],
   imports: [
     RoomModule,
