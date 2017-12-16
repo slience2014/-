@@ -9,6 +9,8 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { RoomModule } from './room/room.module';
 import { HomeComponent } from './home/home.component';
 import { MessageComponent } from './message/message.component';
+import { LoginComponent } from './login/login.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -36,8 +38,11 @@ const routes: Routes = [
   {
     path: 'message',
     component: MessageComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
-
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './home/homepage/homepage.component';
@@ -12,7 +13,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FootComponent } from './foot/foot.component';
 import { MessageComponent } from './message/message.component';
-
+import { HttpModule } from '@angular/http';
+import { ApiService } from './service/api.service';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -28,14 +32,21 @@ import { MessageComponent } from './message/message.component';
 
     FootComponent,
 
-    MessageComponent
+    MessageComponent,
+
+    LoginComponent,
+
+    RegisterComponent
   ],
   imports: [
+    CoreModule,
+    FormsModule,
+    HttpModule,
     RoomModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

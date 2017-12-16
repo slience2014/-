@@ -11,6 +11,13 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+    $('.eng').hover(function(){
+      $('.eng p').show();
+    },function(){
+      $('.eng p').hide();
+    });
+
   }
 
 }

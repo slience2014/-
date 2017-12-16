@@ -11,23 +11,28 @@
       <div class="messageboardsc-top heading">
       </div>
       <!--<form action="MessageBoardsServ" method="post">-->
-      <div class="messageboardsc-bottom">
-        <input type="text" value="Name" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Name...';}" />
+      <div class="messageboardsc-bottom" >
+        <input [(ngModel)]="msg.usrname" type="text" value="Name" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Name...';}" />
         <br />
         <br />
-        <input type="text" value="Email" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Email...';}" />
+        <input [(ngModel)]="msg.email" type="text" value="Email" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Email...';}" />
         <br />
         <br />
-        <input type="text" value="Phone" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Phone...';}" />
+        <input [(ngModel)]="msg.phonenumber" type="text" value="Phone" onfocus="this.value = '';" style="color:gray;" onblur="if (this.value == '') {this.value = 'Phone...';}" />
         <br />
         <br />
-        <textarea style="size:" value="Message:" onfocus="this.value = '';" style="color:lightpink;" onblur="if (this.value == '') {this.value = 'Message';}">Message...</textarea>
+        <textarea [(ngModel)]="msg.text" style="size:14px" value="Message:" onfocus="this.value = '';" style="color:lightpink;" onblur="if (this.value == '') {this.value = 'Message';}">Message...</textarea>
+
         <div class="messageboardsc-submit-btn">
           <form>
-            <input type="submit" value="提交" >
+            <p> {{done}}</p>
+            <input type="submit" (click)="save()" value="提交" >
           </form>
         </div>
       </div>
+
+
+
       <!--</form>-->
     </div>
   </div>
