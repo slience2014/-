@@ -10,7 +10,7 @@ import { RoomModule } from './room/room.module';
 import { HomeComponent } from './home/home.component';
 import { MessageComponent } from './message/message.component';
 import { LoginComponent } from './login/login.component';
-
+import { RegisterComponent } from './register/register.component';
 const routes: Routes = [
   {
     path: '',
@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
   }
 ];
 
