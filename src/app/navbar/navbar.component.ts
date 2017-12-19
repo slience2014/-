@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-
+import { Injectable, Inject } from '@angular/core';
+import { Http, Headers, Response } from '@angular/http';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,8 +8,9 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  userId: number;
+  username:string;
+  constructor(private http: Http, @Inject('user') private userService) { }
 
   ngOnInit() {
 
@@ -18,6 +20,38 @@ export class NavbarComponent implements OnInit {
       $('.eng p').hide();
     });
 
+    const divLogin = document.getElementById('Login');
+    const divLogout = document.getElementById('Logout');
+    const divRegister = document.getElementById('Register');
+    const divlogineng = document.getElementById('logineng');
+    const divWelcome = document.getElementById('Welcome');
+    this.userId = -1;
+    if(localStorage.getItem('userId') !== null){
+      //已登录
+      divLogin.style.display = 'none';
+      divRegister.style.display = 'none';
+      divlogineng.style.display = 'none';
+      this.userId = <number><any>localStorage.getItem('userId');
+      console.log(localStorage);
+      this.userService. getUserById(this.userId).then(user=>{
+        this.username = user.username;
+      });
+     // this.username = <number><any>localStorage.getItem('username');
+
+    }
+    else{
+      //未登录
+      divLogout.style.display = 'none';
+      divWelcome.style.display = 'none';
+
+    }
   }
+
+  logout() {
+    localStorage.removeItem('userId');
+    this.userId = -1;
+    location.reload();
+  }
+
 
 }

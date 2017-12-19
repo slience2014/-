@@ -17,7 +17,7 @@ import { HttpModule } from '@angular/http';
 import { ApiService } from './service/api.service';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
+import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
   declarations: [
@@ -25,17 +25,11 @@ import { RegisterComponent } from './register/register.component';
     HomepageComponent,
     AboutusComponent,
     ReservationComponent,
-
     NavbarComponent,
-
     HomeComponent,
-
     FootComponent,
-
     MessageComponent,
-
     LoginComponent,
-
     RegisterComponent
   ],
   imports: [
@@ -44,7 +38,8 @@ import { RegisterComponent } from './register/register.component';
     HttpModule,
     RoomModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProfileModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

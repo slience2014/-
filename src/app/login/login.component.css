@@ -75,8 +75,8 @@
 /*!pc/page/login/main.less*/
 body{
   margin:0;padding:0;
-  font-family:"Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;color:#333;
-  word-wrap:break-word;-webkit-font-smoothing:antialiased
+
+  word-wrap:break-word;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{
   display:block

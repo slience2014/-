@@ -1,20 +1,21 @@
 <div id="nrbox">
 <section class="content_box cleafix">
   <div class="left_area fl">
-    <!-- 在调用Servlet服务之前需要写入basePath -->
-    <form action="<%=basePath%>LoginServ" method="post">
+    <!--  -->
+    <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+      <div ngModelGroup="login">
       <div class="form_body" data-view="loginView">
         <div class="input_item clearfix" data-propertyname="username" data-controltype="Phone" style="display: block;">
-          <input type="text" class="input input_white" id="" name="useraccount" placeholder="请输入已验证手机/邮箱" data-required="required" autocomplete="off">
+          <input type="text" class="input input_white" name="username" placeholder="请输入已验证手机/邮箱"[(ngModel)]="username" #usernameRef="ngModel" required minlength="11" autocomplete="off">
+          <label *ngIf="usernameRef.errors?.required">this is required</label>
+          <label *ngIf="usernameRef.errors?.minlength">should be 11 numbers</label>
+          <label *ngIf="auth?.hasError">{{auth.errMsg}}</label>
         </div>
         <div class="input_item clearfix" data-propertyname="password" data-controltype="Password" style="display: block;">
-          <input type="password" class="input input_white" id="" name="userpwd" placeholder="请输入密码" data-required="required" autocomplete="off">
+          <input type="password" class="input input_white"  name="password" placeholder="请输入密码" autocomplete="off" [(ngModel)]="password" #passwordRef="ngModel" required>
+          <label *ngIf="passwordRef.errors?.required">this is required</label>
         </div>
-        <div class="input_item clearfix" data-propertyname="request_form_verifyCode" data-controltype="VerifyCode" style="display:none;">
-          <input type="text" class="input input_white fl" style="width:130px; display:block;" name="" placeholder="请证明你不是机器人" data-required="required" autocomplete="off">
-          <img src="http://passport.lagou.com/login/login.html" alt="" class="yzm">
-          <a href="javascript:;" class="reflash"></a>
-        </div>
+
         <div class="input_item clearfix">
           <table width="100%">
             <tr>
@@ -33,10 +34,11 @@
         </div>
         <div class="input_item clearfix">
           <!--<h5 class="reg_now">还没有启元帐号？<a href="http://passport.lagou.com/register/register.html">立即注册</a></h5>-->
-          <h5 class="reg_now">还没有启元帐号？<a href="../register/register.html">立即注册</a></h5>
+          <h5 class="reg_now">还没有启元帐号？<a  routerLink="/login" routerLinkActive="active" id="Login">立即注册</a></h5>
         </div>
         <input type="hidden" value="" id="isVisiable_request_form_verifyCode">
       </div>
+        </div>
     </form>
   </div>
 

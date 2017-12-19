@@ -8,7 +8,7 @@
         <img src="<%=basePath%>../../assets/img/logo220x50.png" width="220" height="50" alt="">
       </a>
     </div>
-    <div class="eng">
+    <div class="eng" id="logineng">
 		            <span>
 		            	<a  routerLink="/login" routerLinkActive="active" id="Login">登录</a>
 		            </span>
@@ -16,6 +16,8 @@
         <a routerLink="/register" routerLinkActive="active" id="Register">注册</a>
       </p>
     </div>
+    <p id="Welcome">欢迎您，{{username}}</p>
+    <button (click)="logout()" id="Logout">Logout</button>
   </div>
 </div>
 
@@ -28,7 +30,6 @@
     <li><a routerLink="/message" routerLinkActive="active" id="Message">留言板</a></li>
   </ul>
 </div>
-
 <div>
   <router-outlet></router-outlet>
 </div>

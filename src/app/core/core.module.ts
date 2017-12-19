@@ -1,7 +1,8 @@
 //import angular core
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { AuthService } from '../service/auth.service';
+import { UserService } from '../service/user.service';
 
 //导入Service
 import { MessageService } from '../service/message.service';
@@ -11,8 +12,9 @@ import { MessageService } from '../service/message.service';
     CommonModule
   ],
   providers: [
-    { provide: 'message', useClass: MessageService }
-
+    { provide: 'message', useClass: MessageService },
+    { provide: 'auth', useClass: AuthService },
+    { provide: 'user', useClass: UserService },
   ]
 })
 export class CoreModule {
